@@ -1,0 +1,36 @@
+@use "../global.scss" as *;
+
+.footer {
+  p {
+    color: $gray-200;
+    font-size: .75rem;
+    text-align: center;
+    padding: 2rem 0;
+    
+    strong {
+      a {
+        color: $orange-500;
+        text-decoration: none;
+      }
+    }
+    .separator {
+      color: $gray-300;
+    }
+  }
+  
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 1rem;
+    .allrights {
+      border-top: 1px solid $gray-400;
+      display: block;
+      margin-top: .5rem;
+      padding: .5rem;
+    }
+    .separator {
+      display: none;
+    }
+  }
+}

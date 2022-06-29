@@ -1,0 +1,149 @@
+$gray-100:   #f2f2f2;
+$gray-200:   #d9d9d9;
+$gray-300:   #808080;
+$gray-400:   #333333;
+$gray-500:   #262626;
+$gray-600:   #1a1a1a;
+$gray-700:   #0d0d0d;
+$green-700:  #1d6d1d;
+$green-500:  #3aa732;
+$orange-500: #fe9100;
+$red-400:    #ec5151;
+
+$ff-sans: "Roboto", sans-serif;
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+$fs-sm: 0.75rem;
+$fs-md: 0.875rem;
+$fs-base: 1rem;
+
+$br-1: 0.5rem;
+$br-full: 9999px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background-color: $gray-600;
+
+  color: $gray-100;
+  font-family: $ff-sans;
+  font-size: $fs-base;
+  font-weight: $fw-regular;
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: $fs-md;
+  }
+}
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: $fs-sm;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $green-500 $green-700;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: $gray-500;
+  border: 1px solid $gray-700;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $green-500;
+  border-radius: 1rem;
+  border: 1px solid $green-700;
+  &:hover {
+    background-color: $green-700;
+  }
+}
+
+::selection {
+  background: $green-500;
+  color: $gray-100;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

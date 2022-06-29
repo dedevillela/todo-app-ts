@@ -1,0 +1,51 @@
+@use "../global.scss" as *;
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: -2rem;
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    color: $gray-100;
+    background-color: $gray-500;
+    border: 1px solid $gray-700;
+    border-radius: $br-1;
+
+    &:focus-visible {
+      border: 1px solid $orange-500;
+      outline: none;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 0.25em;
+    color: $gray-100;
+    border: none;
+    border-radius: $br-1;
+    background-color: $green-700;
+    transition: background-color 0.15s;
+
+    &:focus-visible,
+    &:hover {
+      background-color: $green-500;
+    }
+
+    svg {
+      font-size: 150%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    margin-top: -1.625rem;
+  }
+}
